@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grafionics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ✅ HEADER -->
+<header>
+  <h1 class="logo">grafionics</h1>
+
+  <!-- Hamburger Menu Button -->
+  <div class="hamburger" onclick="document.querySelector('header nav').classList.toggle('active'); this.classList.toggle('active');">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+
+
+        </nav>
+    </header>
+
+    <!-- ✅ PAGE 1: HOME -->
+    <section class="Home">
+        <div class="text-box">
+            <h1>Creative Power, Clear Vision</h1>
+            <p>We turn bold ideas into impactful visuals.
+            Focused on quality and strategy, we craft designs that elevate your brand.
+            Every project blends creativity with purpose.</p>
+            <span class="btn-box"></span>
+            <a href="contact.html">
+                <button type="button" class="btn">Contact Us</button>
+            </a>
+        </div>
+        <img src="ChatGPT Image Jul 17, 2025, 04_27_33 AM.png" class="wow" alt="">  
+        <img src="ChatGPT Image Jul 17, 2025, 04_20_59 AM.png" class="name" alt="">  
+
+        <div class="scroll-down" onclick="document.querySelector('.second-page').scrollIntoView({behavior: 'smooth'});">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ✅ PAGE 2: WHAT IS grafionics -->
+    <section class="second-page">
+        <div class="content">
+            <h2 class="animated-text">What is grafionics?</h2>
+            <p class="animated-para">
+                grafionics is a professional graphic design service that provides you with 
+                creative and impactful designs in very little time. We focus on quality, 
+                speed, and delivering visuals that truly represent your brand.
+            </p>
+        </div>
+        <div class="scroll-down" onclick="document.querySelector('.services-page').scrollIntoView({behavior: 'smooth'});">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- ✅ PAGE 3: SERVICES -->
+<section class="services-page">
+    <div class="content">
+        <h2 class="animated-text">Our Services</h2>
+        <div class="services-list">
+            <div class="service">
+                <h3>Logo Design</h3>
+                <p>Professional and unique logos that represent your brand identity.</p>
+            </div>
+            <div class="service">
+                <h3>Graphic Design</h3>
+                <p>Posters, flyers, and all types of visual content crafted to perfection.</p>
+            </div>
+            <div class="service">
+                <h3>Character Design</h3>
+                <p>Custom illustrated characters for branding, games, and animations.</p>
+            </div>
+            <div class="service">
+                <h3>AI Video Generation</h3>
+                <p>High-quality AI-generated videos tailored for marketing and storytelling.</p>
+            </div>
+            <div class="service">
+                <h3>Branding & Identity</h3>
+                <p>Full brand kits, including typography, color palettes, and strategy.</p>
+            </div>
+            <div class="service">
+                <h3>Social Media Graphics</h3>
+                <p>Eye-catching graphics for Instagram, Facebook, and ad campaigns.</p>
+            </div>
+            <!-- ✅ NEW SERVICE 1 -->
+            <div class="service">
+                <h3>Web Design & Development</h3>
+                <p>Modern, responsive, and visually appealing websites tailored to your brand and business needs.</p>
+            </div>
+            <!-- ✅ NEW SERVICE 2 -->
+            <div class="service">
+                <h3>Motion Graphics</h3>
+                <p>Engaging animated visuals and effects that bring your ideas and brand stories to life.</p>
+            </div>
+            <!-- ✅ NEW SERVICE 3 -->
+            <div class="service">
+                <h3>CapCut Professional Editing</h3>
+                <p>High-quality video editing using CapCut, delivering polished and creative content for all platforms.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ✅ PAGE 4: PROJECTS -->
+<section class="projects-page">
+  <div class="content">
+    <h2 class="animated-text">Our Projects</h2>
+    <div class="projects-carousel">
+      <div class="projects-track">
+        <!-- Repeat your project images here -->
+        <img src="ChatGPT Image Sep 1, 2025, 09_10_27 AM.png" alt="Project 1">
+        <img src="Untitled design.png" alt="Project 2">
+        <img src="Untitled design (2).png" alt="Project 3">
+        <img src="Untitled design (1).png" alt="Project 4">
+        <img src="Untitled design (4).png" alt="Project 5">
+        <!-- Duplicate for smooth infinite scroll -->
+        <img src="ChatGPT Image Sep 1, 2025, 09_10_27 AM.png" alt="Project 1">
+        <img src="Untitled design.png" alt="Project 2">
+        <img src="Untitled design (2).png" alt="Project 3">
+        <img src="Untitled design (1).png" alt="Project 4">
+        <img src="Untitled design (4).png" alt="Project 5">
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* ✅ PROJECTS PAGE STYLING */
+.projects-page {
+  padding: 60px 20px;
+  background: #FFD700; /* 🌟 Yellow background */
+  text-align: center;
+  overflow: hidden;
+}
+
+.projects-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.projects-track {
+  display: flex;
+  width: calc(250px * 10); /* adjust depending on image count */
+  animation: scroll 40s linear infinite;
+}
+
+.projects-track img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  margin: 0 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ✅ Hover effect for images */
+.projects-track img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+/* ✅ Infinite scroll animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
+
+<!-- ✅ PAGE 5: CONTACT INFO -->
+<section class="contact-info-page">
+  <div class="contact-left">
+    <h2>Contact Information</h2>
+    <p>📱 WhatsApp: +92 3282827095</p>
+    <p>📧 Email: <a href="Zaidhabib204@gmail.com">Zaidhabib204@gmail.com</a></p>
+  </div>
+
+  <div class="contact-right">
+    <blockquote>"Design is intelligence made visible."</blockquote>
+    <a href="contact.html" class="btn">Contact Us</a>
+  </div>
+</section>
+
+<style>
+/* ✅ CONTACT INFO PAGE */
+.contact-info-page {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 20px;
+  background: #000; /* black background */
+  text-align: left;
+  color: #FFD700; /* yellow text */
+}
+
+.contact-left {
+  width: 50%;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.contact-left a {
+  color: #FFD700; /* yellow for email link */
+  text-decoration: none;
+}
+
+.contact-left a:hover {
+  text-decoration: underline;
+}
+
+.contact-right {
+  width: 40%;
+  text-align: center;
+}
+
+.contact-right blockquote {
+  font-size: 22px;
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #FFD700;
+}
+
+.contact-right .btn {
+  background: #82731c;
+  color: #000;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+</style>

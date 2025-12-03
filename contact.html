@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - grafionics</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+  <script>
+    (function(){
+        emailjs.init("xQQSvWU6DfKPnZkUS"); // ✅ Your Public Key
+    })();
+    function sendMail(event){
+      event.preventDefault();
+      emailjs.sendForm("service_nqyn7ts", "template_asxl7yc", event.target)
+      .then(function() {
+          alert("✅ Message Sent Successfully!");
+      }, function(error) {
+          alert("❌ Failed to send: " + JSON.stringify(error));
+      });
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>grafionics</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact">
+    <div class="contact-box">
+      <h1>Contact Us</h1>
+      <p>Have a project in mind? Let’s talk!</p>
+      <form onsubmit="sendMail(event)">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
